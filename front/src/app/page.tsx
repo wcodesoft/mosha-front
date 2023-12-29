@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <main>
-      <h1>{quote.text}</h1>
+      <h1 className='text-3xl font-bold'>{quote.text}</h1>
       <h2>{quote.author?.name}</h2>
       {quote.author?.picUrl && <img src={quote.author.picUrl} alt={quote.author.name} />}
     </main>
