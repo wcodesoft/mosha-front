@@ -1,4 +1,4 @@
-import { getRandomQuote, Quote } from '../data/quotes'
+import { getRandomQuote, Quote } from '../lib/quotes'
 
 export default async function Home() {
 
@@ -8,6 +8,7 @@ export default async function Home() {
     <main>
       <h1>{quote.text}</h1>
       <h2>{quote.author?.name}</h2>
+      {quote.author?.picUrl && <img src={quote.author.picUrl} alt={quote.author.name} />}
     </main>
   )
 }

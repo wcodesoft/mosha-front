@@ -19,6 +19,7 @@ export async function getRandomQuote(): Promise<Quote> {
 
     const quote: Quote = await res.json()
     const author: Author = await getAuthorById(quote.authorId)
+    console.log(author)
     quote.author = author
 
     return quote
