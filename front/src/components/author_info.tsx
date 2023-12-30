@@ -9,7 +9,7 @@ const roboto = Roboto({
 export default function AuthorInfo({ author }: { author: Author }) {
     return (
         <div className={roboto.className}>
-            <h5 className='text-center'>{author.name}</h5>
+            <h5 className='text-center m-5'>{author.name}</h5>
             {author.picUrl && (
                 <img className="w-24 h-24 rounded-full mx-auto" src={author.picUrl} alt="" />
             )}
