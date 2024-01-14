@@ -1,5 +1,5 @@
 import QuoteText from '@/components/quote_text'
-import { getRandomQuote, Quote } from '../lib/quotes'
+import { getRandomQuote, Quote } from '@/lib/quotes'
 import AuthorInfo from '@/components/author_info'
 
 export default async function Home() {

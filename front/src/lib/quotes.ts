@@ -1,4 +1,5 @@
-import { Author, getAuthorById } from "./author";
+import {Author, getAuthorById} from "@/lib/author";
+import {getEndpoints} from "@/lib/endpoints";
 
 export interface Quote {
     id: string;
@@ -10,7 +11,7 @@ export interface Quote {
 
 export async function getRandomQuote(): Promise<Quote> {
 
-    const res = await fetch('https://mosha.wcode.space/api/v1/quote/random', { cache: 'no-store' })
+    const res = await fetch(`${getEndpoints().quoteAPI}/random`, { cache: 'no-store' })
 
     if (!res.ok) {
         // This will activate the closest `error.js` Error Boundary
@@ -18,8 +19,7 @@ export async function getRandomQuote(): Promise<Quote> {
     }
 
     const quote: Quote = await res.json()
-    const author: Author = await getAuthorById(quote.authorId)
-    quote.author = author
+    quote.author = await getAuthorById(quote.authorId)
 
     return quote
 }

@@ -1,4 +1,4 @@
-import { Author } from '../lib/author'
+import { Author } from '@/lib/author'
 import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({

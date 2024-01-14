@@ -1,4 +1,4 @@
-import { Quote } from '../lib/quotes'
+import { Quote } from '@/lib/quotes'
 import { Merienda } from 'next/font/google'
 
 const merienda = Merienda({ subsets: ['latin'] })
