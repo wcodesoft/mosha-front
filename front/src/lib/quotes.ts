@@ -9,6 +9,12 @@ export interface Quote {
     author?: Author;
 }
 
+
+/**
+ * Returns a random quote from the Mosha server.
+ *
+ * @returns The random quote.
+ */
 export async function getRandomQuote(): Promise<Quote> {
 
     const res = await fetch(`${getEndpoints().quoteAPI}/random`, { cache: 'no-store' })

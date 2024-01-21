@@ -6,6 +6,13 @@ export interface Author {
   picUrl?: string;
 }
 
+/**
+ * Returns an author by id.
+ *
+ * @param id The id of the author to fetch.
+ * @returns The author.
+ * @throws Error if the request fails.
+ */
 export async function getAuthorById(id: string): Promise<Author> {
 
   const res = await fetch(`${getEndpoints().authorAPI}/${id}`)
