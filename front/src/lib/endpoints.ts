@@ -29,6 +29,7 @@ export const getEndpoints = (): Endpoints => {
         console.log("Using development endpoints")
         return DEV_ENDPOINTS
     }
+    console.log("Using production endpoints")
     return PROD_ENDPOINTS
 }
 

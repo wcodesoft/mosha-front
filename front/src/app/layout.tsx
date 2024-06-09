@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '../style/globals.css'
+import React from "react";
 
 export const metadata: Metadata = {
   title: 'Mosha',
